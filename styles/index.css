@@ -1,14 +1,27 @@
 .hero-banner {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     background: burlywood;
     align-items: center;
     padding: 10px;
-    /* justify-content: baseline; */
+    gap: 8px;
+}
+/* Media element for Responsiveness
+but having issue with Logo */
+@media (max-width: 768px) {
+    .hero-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-left: 0;
+    }
 }
 
 .hero-content {
     flex: 1;
-    margin-left: 8px;
 }
 
 .hero-image {
@@ -20,8 +33,16 @@
     border-radius: 9px;
 }
 
+.hero-content h1 {
+    color: olivedrab;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.hero-content p {
+    line-height: 1.7;
+}
 .btn {
-    margin-top: 35px;
+    margin-top: 9px;
     background: #2E8B57;
     color: white;
     border: none;
@@ -40,10 +61,4 @@
 
 .btn:hover {
     background: #E25822;
-}
-
-h1 {
-    color: olivedrab;
-    text-align: center;
-    margin-bottom: 15px;
 }
